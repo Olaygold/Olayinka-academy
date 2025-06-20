@@ -1,1 +1,29 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF‑8">
+  <title>Olayinka Trading Academy Waitlist</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <img src="{{ url_for('static', filename='logo1.png') }}" alt="Logo">
+    <h1>Join the Olayinka Trading Academy Waitlist</h1>
+    <div id="step1">
+      <input id="email" type="email" placeholder="Your email">
+      <button onclick="sendOtp()">Send OTP</button>
+    </div>
+    <div id="step2" style="display:none;">
+      <input id="otp" type="text" placeholder="Enter OTP">
+      <button onclick="verifyOtp()">Verify OTP</button>
+    </div>
+    <div id="step3" style="display:none;">
+      <input id="phone" type="tel" placeholder="Your phone number">
+      <button onclick="savePhone()">Save Phone</button>
+    </div>
+    <div id="message"></div>
+  </div>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
